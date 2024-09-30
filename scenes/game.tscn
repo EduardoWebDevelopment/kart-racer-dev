@@ -1,6 +1,5 @@
-[gd_scene load_steps=39 format=3 uid="uid://4d7kqu78guqg"]
+[gd_scene load_steps=41 format=3 uid="uid://4d7kqu78guqg"]
 
-[ext_resource type="AudioStream" uid="uid://1nwdmko044nj" path="res://assets/sounds/Sky_Garden.mp3" id="1_na4g4"]
 [ext_resource type="ArrayMesh" uid="uid://d0e0y0k6kqsej" path="res://assets/Sky_Garden/old_sky_agb.obj" id="1_powgb"]
 [ext_resource type="Texture2D" uid="uid://bs21jaw7cb14e" path="res://assets/Sky_Garden/sky_tuta1.png" id="2_6kvac"]
 [ext_resource type="Texture2D" uid="uid://c261h21eofrwl" path="res://assets/Sky_Garden/sky_sky1.png" id="3_fgypf"]
@@ -12,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://vgiy8skvpn4i" path="res://assets/Sky_Garden/agb_block.png" id="9_toutv"]
 [ext_resource type="Texture2D" uid="uid://ba5jjt3ee2yjr" path="res://assets/Sky_Garden/sky_dirt1.png" id="10_gc4ob"]
 [ext_resource type="Texture2D" uid="uid://do42qaf6osoe6" path="res://assets/Sky_Garden/sky_road1.png" id="11_cyk5e"]
+[ext_resource type="PackedScene" uid="uid://dkuwcntbn4jl2" path="res://scenes/car.tscn" id="12_nm0t3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u3wcw"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -95,6 +95,10 @@ albedo_texture = ExtResource("10_gc4ob")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_auwi7"]
 albedo_texture = ExtResource("11_cyk5e")
 
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_jgkr1"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_nvr66"]
+
 [node name="Game" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -106,10 +110,6 @@ shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 56, 237.218, 58.8122)
-
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Camera3D"]
-stream = ExtResource("1_na4g4")
-autoplay = true
 
 [node name="Sky_Garden" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 33, 60)
@@ -137,3 +137,16 @@ surface_material_override/20 = SubResource("StandardMaterial3D_d2nq4")
 surface_material_override/21 = SubResource("StandardMaterial3D_qt6t7")
 surface_material_override/22 = SubResource("StandardMaterial3D_s4wxq")
 surface_material_override/23 = SubResource("StandardMaterial3D_auwi7")
+
+[node name="Car" parent="." instance=ExtResource("12_nm0t3")]
+transform = Transform3D(-0.999599, 0, -0.0283229, 0, 1, 0, 0.0283229, 0, -0.999599, 145.344, 68.0666, 20.3263)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 120.111, 63.8162, 0.763626)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_jgkr1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 19.8129, 0.423996, 0)
+mesh = SubResource("PlaneMesh_nvr66")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ftfjb2juk3gv"]
 
-[ext_resource type="Script" path="res://scipts/title_screen_buttons/single_player.gd" id="1_kyyvx"]
+[ext_resource type="Script" path="res://scripts/title_screen_buttons/single_player.gd" id="1_kyyvx"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3

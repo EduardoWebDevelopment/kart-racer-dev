@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bmdbm048xrpmm"]
 
-[ext_resource type="Script" path="res://scipts/main_menu_button/race!.gd" id="1_cat6t"]
+[ext_resource type="Script" path="res://scripts/main_menu_button/race!.gd" id="1_cat6t"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
