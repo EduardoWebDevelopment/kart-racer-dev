@@ -1,0 +1,72 @@
+[gd_scene load_steps=2 format=3 uid="uid://ftfjb2juk3gv"]
+
+[ext_resource type="Script" path="res://scipts/title_screen_buttons/single_player.gd" id="1_kyyvx"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.092
+anchor_top = 0.046
+anchor_right = 0.913
+anchor_bottom = 0.309
+offset_left = 0.0159912
+offset_top = 0.191998
+offset_right = -864.776
+offset_bottom = -147.232
+scale = Vector2(11.6714, 7.40805)
+text = "Kart Racer"
+
+[node name="Single_Player" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.458
+anchor_top = 0.34
+anchor_right = 0.551
+anchor_bottom = 0.387
+offset_left = 0.383972
+offset_top = -0.320007
+offset_right = 0.247986
+offset_bottom = 0.223984
+text = "Single Player"
+script = ExtResource("1_kyyvx")
+
+[node name="Multiplayer" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.462
+anchor_top = 0.448
+anchor_right = 0.546
+anchor_bottom = 0.495
+offset_left = -0.223999
+offset_top = -0.304016
+offset_right = 0.00799561
+offset_bottom = 0.23999
+text = "Multiplayer"
+
+[node name="Controls" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.471
+anchor_top = 0.532
+anchor_right = 0.536
+anchor_bottom = 0.58
+offset_left = 0.407959
+offset_top = 0.264008
+offset_right = -0.472046
+offset_bottom = 0.159973
+text = "Controls"
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[connection signal="pressed" from="Single_Player" to="Single_Player" method="_on_pressed"]
