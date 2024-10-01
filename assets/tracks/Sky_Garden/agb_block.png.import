@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n2lyp28k7dub"
-path.s3tc="res://.godot/imported/sky_dashJ.png-1ba3c1fba3bd98970191764fd7c0ca16.s3tc.ctex"
+uid="uid://bn3rspcrq6ed1"
+path.s3tc="res://.godot/imported/agb_block.png-4d309ab4faf6c5d42c6dae0f60881265.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Sky_Garden/sky_dashJ.png"
-dest_files=["res://.godot/imported/sky_dashJ.png-1ba3c1fba3bd98970191764fd7c0ca16.s3tc.ctex"]
+source_file="res://assets/tracks/Sky_Garden/agb_block.png"
+dest_files=["res://.godot/imported/agb_block.png-4d309ab4faf6c5d42c6dae0f60881265.s3tc.ctex"]
 
 [params]
 

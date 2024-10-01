@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ba5jjt3ee2yjr"
-path.s3tc="res://.godot/imported/sky_dirt1.png-08810443a313710ac01f6f8bbbaaa2f6.s3tc.ctex"
+uid="uid://bs21jaw7cb14e"
+path.s3tc="res://.godot/imported/sky_tuta1.png-51be28c84dc65403289d89166e3c4953.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Sky_Garden/sky_dirt1.png"
-dest_files=["res://.godot/imported/sky_dirt1.png-08810443a313710ac01f6f8bbbaaa2f6.s3tc.ctex"]
+source_file="res://assets/tracks/Sky_Garden/sky_tuta1.png"
+dest_files=["res://.godot/imported/sky_tuta1.png-51be28c84dc65403289d89166e3c4953.s3tc.ctex"]
 
 [params]
 

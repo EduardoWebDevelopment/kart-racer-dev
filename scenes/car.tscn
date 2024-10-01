@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dkuwcntbn4jl2"]
+[gd_scene load_steps=10 format=3 uid="uid://dkuwcntbn4jl2"]
 
 [ext_resource type="Script" path="res://scripts/car2.gd" id="1_318nw"]
-[ext_resource type="AudioStream" uid="uid://1nwdmko044nj" path="res://assets/sounds/Sky_Garden.mp3" id="2_nhn65"]
+[ext_resource type="Texture2D" uid="uid://dxsdvosl0qecw" path="res://assets/images/webdev_logo.png" id="3_fugd6"]
+[ext_resource type="PackedScene" uid="uid://bmwh6n8gr4wvd" path="res://ui/car_ui.tscn" id="3_pow51"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ibdse"]
 
@@ -15,6 +16,11 @@ albedo_color = Color(0, 0, 0, 1)
 material = SubResource("StandardMaterial3D_8x4io")
 height = 0.25
 radial_segments = 10
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_p47ak"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_30a7e"]
+albedo_texture = ExtResource("3_fugd6")
 
 [node name="Car" type="VehicleBody3D"]
 mass = 50.0
@@ -94,6 +100,9 @@ current = true
 [node name="ReverseCamera" type="Camera3D" parent="CenterOfMass/Cameras"]
 transform = Transform3D(1, -2.26267e-08, 1.71867e-07, -2.26267e-08, 0.965926, 0.258819, -1.71867e-07, -0.258819, 0.965926, 0, 1, 3)
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("2_nhn65")
-autoplay = true
+[node name="WebDevLogo" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.52586e-07, 0, -0.729922, 0, 0.781462, 0, 1.92616, 0, 9.57178e-08, 0, 0.255, 0)
+mesh = SubResource("PlaneMesh_p47ak")
+surface_material_override/0 = SubResource("StandardMaterial3D_30a7e")
+
+[node name="Ui" parent="." instance=ExtResource("3_pow51")]

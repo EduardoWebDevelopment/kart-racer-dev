@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3jwfepccpqks"
-path.s3tc="res://.godot/imported/sky_StartLine.png-48885dd76bdc76ebe0a32bb2fac7686e.s3tc.ctex"
+uid="uid://c261h21eofrwl"
+path.s3tc="res://.godot/imported/sky_sky1.png-df19f4bdea40c36ac9b108c5299d5351.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Sky_Garden/sky_StartLine.png"
-dest_files=["res://.godot/imported/sky_StartLine.png-48885dd76bdc76ebe0a32bb2fac7686e.s3tc.ctex"]
+source_file="res://assets/tracks/Sky_Garden/sky_sky1.png"
+dest_files=["res://.godot/imported/sky_sky1.png-df19f4bdea40c36ac9b108c5299d5351.s3tc.ctex"]
 
 [params]
 

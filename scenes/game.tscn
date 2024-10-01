@@ -1,16 +1,6 @@
-[gd_scene load_steps=41 format=3 uid="uid://4d7kqu78guqg"]
+[gd_scene load_steps=6 format=3 uid="uid://4d7kqu78guqg"]
 
-[ext_resource type="ArrayMesh" uid="uid://d0e0y0k6kqsej" path="res://assets/Sky_Garden/old_sky_agb.obj" id="1_powgb"]
-[ext_resource type="Texture2D" uid="uid://bs21jaw7cb14e" path="res://assets/Sky_Garden/sky_tuta1.png" id="2_6kvac"]
-[ext_resource type="Texture2D" uid="uid://c261h21eofrwl" path="res://assets/Sky_Garden/sky_sky1.png" id="3_fgypf"]
-[ext_resource type="Texture2D" uid="uid://dcppqntvkc4np" path="res://assets/Sky_Garden/sky_cloud1.png" id="4_tdp5u"]
-[ext_resource type="Texture2D" uid="uid://bcj46j4tergex" path="res://assets/Sky_Garden/sky_jump1.png" id="5_wtapb"]
-[ext_resource type="Texture2D" uid="uid://n2lyp28k7dub" path="res://assets/Sky_Garden/sky_dashJ.png" id="6_ee1yc"]
-[ext_resource type="Texture2D" uid="uid://bas2r2omjrgff" path="res://assets/Sky_Garden/sky_bridge1.png" id="7_k4w5u"]
-[ext_resource type="Texture2D" uid="uid://c3jwfepccpqks" path="res://assets/Sky_Garden/sky_StartLine.png" id="8_8etqy"]
-[ext_resource type="Texture2D" uid="uid://vgiy8skvpn4i" path="res://assets/Sky_Garden/agb_block.png" id="9_toutv"]
-[ext_resource type="Texture2D" uid="uid://ba5jjt3ee2yjr" path="res://assets/Sky_Garden/sky_dirt1.png" id="10_gc4ob"]
-[ext_resource type="Texture2D" uid="uid://do42qaf6osoe6" path="res://assets/Sky_Garden/sky_road1.png" id="11_cyk5e"]
+[ext_resource type="PackedScene" uid="uid://n57ydi123qm" path="res://scenes/donut_plains_model.tscn" id="3_pmj4p"]
 [ext_resource type="PackedScene" uid="uid://dkuwcntbn4jl2" path="res://scenes/car.tscn" id="12_nm0t3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u3wcw"]
@@ -26,79 +16,6 @@ sky = SubResource("Sky_f5lsl")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2vuid"]
-albedo_texture = ExtResource("2_6kvac")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b65rs"]
-albedo_texture = ExtResource("2_6kvac")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y5jcb"]
-albedo_texture = ExtResource("2_6kvac")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ipc6q"]
-albedo_texture = ExtResource("2_6kvac")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xioqo"]
-albedo_texture = ExtResource("2_6kvac")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hcna3"]
-albedo_texture = ExtResource("3_fgypf")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g5dky"]
-albedo_texture = ExtResource("2_6kvac")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bff6u"]
-albedo_texture = ExtResource("4_tdp5u")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_731v7"]
-albedo_texture = ExtResource("2_6kvac")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3jxso"]
-albedo_texture = ExtResource("2_6kvac")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f8l7i"]
-albedo_texture = ExtResource("2_6kvac")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d3wm7"]
-albedo_texture = ExtResource("2_6kvac")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gfq60"]
-albedo_texture = ExtResource("2_6kvac")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ujmfl"]
-albedo_texture = ExtResource("2_6kvac")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pklw7"]
-albedo_texture = ExtResource("2_6kvac")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6ht3f"]
-albedo_texture = ExtResource("2_6kvac")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h65nd"]
-albedo_texture = ExtResource("5_wtapb")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ptf2o"]
-albedo_texture = ExtResource("6_ee1yc")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rtgb2"]
-albedo_texture = ExtResource("7_k4w5u")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d2nq4"]
-albedo_texture = ExtResource("8_8etqy")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qt6t7"]
-albedo_texture = ExtResource("9_toutv")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s4wxq"]
-albedo_texture = ExtResource("10_gc4ob")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_auwi7"]
-albedo_texture = ExtResource("11_cyk5e")
-
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_jgkr1"]
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_nvr66"]
-
 [node name="Game" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -111,42 +28,7 @@ shadow_enabled = true
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 56, 237.218, 58.8122)
 
-[node name="Sky_Garden" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 33, 60)
-mesh = ExtResource("1_powgb")
-surface_material_override/1 = SubResource("StandardMaterial3D_2vuid")
-surface_material_override/2 = SubResource("StandardMaterial3D_b65rs")
-surface_material_override/3 = SubResource("StandardMaterial3D_y5jcb")
-surface_material_override/4 = SubResource("StandardMaterial3D_ipc6q")
-surface_material_override/5 = SubResource("StandardMaterial3D_xioqo")
-surface_material_override/6 = SubResource("StandardMaterial3D_hcna3")
-surface_material_override/7 = SubResource("StandardMaterial3D_g5dky")
-surface_material_override/8 = SubResource("StandardMaterial3D_bff6u")
-surface_material_override/9 = SubResource("StandardMaterial3D_731v7")
-surface_material_override/10 = SubResource("StandardMaterial3D_3jxso")
-surface_material_override/11 = SubResource("StandardMaterial3D_f8l7i")
-surface_material_override/12 = SubResource("StandardMaterial3D_d3wm7")
-surface_material_override/13 = SubResource("StandardMaterial3D_gfq60")
-surface_material_override/14 = SubResource("StandardMaterial3D_ujmfl")
-surface_material_override/15 = SubResource("StandardMaterial3D_pklw7")
-surface_material_override/16 = SubResource("StandardMaterial3D_6ht3f")
-surface_material_override/17 = SubResource("StandardMaterial3D_h65nd")
-surface_material_override/18 = SubResource("StandardMaterial3D_ptf2o")
-surface_material_override/19 = SubResource("StandardMaterial3D_rtgb2")
-surface_material_override/20 = SubResource("StandardMaterial3D_d2nq4")
-surface_material_override/21 = SubResource("StandardMaterial3D_qt6t7")
-surface_material_override/22 = SubResource("StandardMaterial3D_s4wxq")
-surface_material_override/23 = SubResource("StandardMaterial3D_auwi7")
-
 [node name="Car" parent="." instance=ExtResource("12_nm0t3")]
-transform = Transform3D(-0.999599, 0, -0.0283229, 0, 1, 0, 0.0283229, 0, -0.999599, 145.344, 68.0666, 20.3263)
+transform = Transform3D(-0.999599, 0, -0.0283229, 0, 1, 0, 0.0283229, 0, -0.999599, -68.91, 11.5572, 15.3733)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 120.111, 63.8162, 0.763626)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("WorldBoundaryShape3D_jgkr1")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 19.8129, 0.423996, 0)
-mesh = SubResource("PlaneMesh_nvr66")
+[node name="DonutPlainsModel" parent="." instance=ExtResource("3_pmj4p")]

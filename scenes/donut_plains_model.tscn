@@ -1,0 +1,89 @@
+[gd_scene load_steps=24 format=3 uid="uid://n57ydi123qm"]
+
+[ext_resource type="ArrayMesh" uid="uid://cljdognfel8og" path="res://assets/tracks/Donut_Plains/old_donut_sfc.obj" id="1_x3mqp"]
+[ext_resource type="Texture2D" uid="uid://dqu74t1mbf4em" path="res://assets/tracks/Donut_Plains/lambert210.png" id="2_rdd0a"]
+[ext_resource type="Texture2D" uid="uid://qxuucv8dgrk0" path="res://assets/tracks/Donut_Plains/bridge.png" id="3_mcm12"]
+[ext_resource type="Texture2D" uid="uid://b1c32y367xn17" path="res://assets/tracks/Donut_Plains/brock_2.png" id="4_quacu"]
+[ext_resource type="Texture2D" uid="uid://xaqtwyirf0ko" path="res://assets/tracks/Donut_Plains/ro02.png" id="5_3q66j"]
+[ext_resource type="Texture2D" uid="uid://bxg2r6hha7tys" path="res://assets/tracks/Donut_Plains/brock_s.png" id="6_580ee"]
+[ext_resource type="Texture2D" uid="uid://cfe3g0ldn2wug" path="res://assets/tracks/Donut_Plains/sea1.png" id="7_avcta"]
+[ext_resource type="Texture2D" uid="uid://bisx3ql75fjv7" path="res://assets/tracks/Donut_Plains/ro01.png" id="8_txul1"]
+[ext_resource type="Texture2D" uid="uid://c00jal52qgvnf" path="res://assets/tracks/Donut_Plains/grass_01.png" id="9_xqvec"]
+[ext_resource type="AudioStream" uid="uid://b63k2lljftiax" path="res://assets/sounds/mu_donut_plains.mp3" id="10_1he3j"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_th4ti"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_ruv8p"]
+sky_material = SubResource("ProceduralSkyMaterial_th4ti")
+
+[sub_resource type="Environment" id="Environment_wxuhv"]
+background_mode = 2
+sky = SubResource("Sky_ruv8p")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eynce"]
+albedo_texture = ExtResource("2_rdd0a")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b3107"]
+albedo_texture = ExtResource("3_mcm12")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tnj50"]
+albedo_texture = ExtResource("4_quacu")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cyq12"]
+albedo_texture = ExtResource("5_3q66j")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h4260"]
+albedo_texture = ExtResource("6_580ee")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s2g1a"]
+albedo_texture = ExtResource("7_avcta")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wmd5w"]
+albedo_texture = ExtResource("8_txul1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uey4n"]
+albedo_texture = ExtResource("9_xqvec")
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_kmch2"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1femo"]
+
+[node name="DonutPlainsModel" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_wxuhv")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.844699, -0.532626, 0.0528477, -0.190996, 0.392187, 0.899839, -0.500003, 0.749999, -0.43301, 0, 51.3031, 0)
+shadow_enabled = true
+
+[node name="Track" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_x3mqp")
+surface_material_override/0 = SubResource("StandardMaterial3D_eynce")
+surface_material_override/1 = SubResource("StandardMaterial3D_b3107")
+surface_material_override/2 = SubResource("StandardMaterial3D_tnj50")
+surface_material_override/3 = SubResource("StandardMaterial3D_cyq12")
+surface_material_override/4 = SubResource("StandardMaterial3D_h4260")
+surface_material_override/5 = SubResource("StandardMaterial3D_s2g1a")
+surface_material_override/6 = SubResource("StandardMaterial3D_wmd5w")
+surface_material_override/7 = SubResource("StandardMaterial3D_uey4n")
+
+[node name="Floor" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -123.606, 5.91001, 6.15717)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("WorldBoundaryShape3D_kmch2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 19.8129, 0.423996, 0)
+mesh = SubResource("PlaneMesh_1femo")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 7.776, 0, 0, 0, 12.022, 0, 0, 0)
+stream = ExtResource("10_1he3j")
+autoplay = true
+parameters/looping = false
