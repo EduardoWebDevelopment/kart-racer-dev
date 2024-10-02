@@ -14,5 +14,5 @@ func _physics_process(delta: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		if event.pressed and event.keycode == KEY_L:
-			$".".translate(Vector3(0,2,0))
+			$"".translate(Vector3(0,2,0))
 			print(position)
