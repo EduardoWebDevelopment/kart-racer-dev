@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://ch3s87vw72b6t"]
+[gd_scene load_steps=42 format=3 uid="uid://ch3s87vw72b6t"]
 
 [ext_resource type="ArrayMesh" uid="uid://d0e0y0k6kqsej" path="res://assets/tracks/Sky_Garden/old_sky_agb.obj" id="1_uvhbf"]
 [ext_resource type="Texture2D" uid="uid://bs21jaw7cb14e" path="res://assets/tracks/Sky_Garden/sky_tuta1.png" id="2_rktye"]
@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bn3rspcrq6ed1" path="res://assets/tracks/Sky_Garden/agb_block.png" id="9_h1kh4"]
 [ext_resource type="Texture2D" uid="uid://ba5jjt3ee2yjr" path="res://assets/tracks/Sky_Garden/sky_dirt1.png" id="10_18j23"]
 [ext_resource type="Texture2D" uid="uid://do42qaf6osoe6" path="res://assets/tracks/Sky_Garden/sky_road1.png" id="11_dnv1q"]
-[ext_resource type="AudioStream" uid="uid://1nwdmko044nj" path="res://assets/sounds/Sky_Garden.mp3" id="12_ftdxg"]
+[ext_resource type="AudioStream" uid="uid://1nwdmko044nj" path="res://assets/sounds/mu_sky_garden.mp3" id="12_splgy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_01cyh"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -102,8 +102,6 @@ albedo_texture = ExtResource("11_dnv1q")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_do7lr"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jqsqf"]
-
 [node name="SkyGardenModel" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -142,7 +140,7 @@ surface_material_override/22 = SubResource("StandardMaterial3D_b5wlj")
 surface_material_override/23 = SubResource("StandardMaterial3D_glpqk")
 
 [node name="Floor" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.5824, 33.7547, 0.763626)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102.716, 33.7521, 0.763626)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
 shape = SubResource("WorldBoundaryShape3D_2vt6c")
@@ -151,14 +149,5 @@ shape = SubResource("WorldBoundaryShape3D_2vt6c")
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 19.8129, 0.423996, 0)
 mesh = SubResource("PlaneMesh_do7lr")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.9761, 0, 47.3737)
-stream = ExtResource("12_ftdxg")
-autoplay = true
-
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67.4727, 37.445, -52.2008)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.42175, -2.534, 9.47526)
-shape = SubResource("ConvexPolygonShape3D_jqsqf")
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_splgy")

@@ -10,3 +10,9 @@ func _physics_process(delta: float) -> void:
 	$BackLeftWheel.engine_force = acceleration * max_torque * (1 - rpm / max_rpm)
 	rpm = $BackRightWheel.get_rpm()
 	$BackRightWheel.engine_force = acceleration * max_torque * (1 - rpm / max_rpm)
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey:
+		if event.pressed and event.keycode == KEY_L:
+			$".".translate(Vector3(0,2,0))
+			print(position)

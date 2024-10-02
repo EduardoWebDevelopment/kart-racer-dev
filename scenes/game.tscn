@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://4d7kqu78guqg"]
+[gd_scene load_steps=7 format=3 uid="uid://4d7kqu78guqg"]
 
+[ext_resource type="PackedScene" uid="uid://bxnlxf7gvois3" path="res://scenes/block.tscn" id="3_42nl1"]
 [ext_resource type="PackedScene" uid="uid://n57ydi123qm" path="res://scenes/donut_plains_model.tscn" id="3_pmj4p"]
 [ext_resource type="PackedScene" uid="uid://dkuwcntbn4jl2" path="res://scenes/car.tscn" id="12_nm0t3"]
 
@@ -29,6 +30,9 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 56, 237.218, 58.8122)
 
 [node name="Car" parent="." instance=ExtResource("12_nm0t3")]
-transform = Transform3D(-0.999599, 0, -0.0283229, 0, 1, 0, 0.0283229, 0, -0.999599, -68.91, 11.5572, 15.3733)
+transform = Transform3D(-0.999599, 0, -0.0283229, 0, 1, 0, 0.0283229, 0, -0.999599, -75.91, 7.5572, 15.3733)
 
 [node name="DonutPlainsModel" parent="." instance=ExtResource("3_pmj4p")]
+
+[node name="Node3D" parent="." instance=ExtResource("3_42nl1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76, 9, -16)

@@ -25,11 +25,15 @@ text = "Race!"
 script = ExtResource("1_cat6t")
 
 [node name="Time Trials" type="Button" parent="."]
-layout_mode = 0
-offset_left = 506.0
-offset_top = 206.0
-offset_right = 625.0
-offset_bottom = 285.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.454
+anchor_top = 0.4
+anchor_right = 0.547
+anchor_bottom = 0.51
+offset_left = -0.120056
+offset_right = -0.160034
+offset_bottom = -0.200043
 text = "Time Trials"
 
 [connection signal="pressed" from="Race!" to="Race!" method="_on_pressed"]
