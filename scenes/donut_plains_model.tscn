@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://n57ydi123qm"]
+[gd_scene load_steps=46 format=3 uid="uid://n57ydi123qm"]
 
 [ext_resource type="ArrayMesh" uid="uid://cljdognfel8og" path="res://assets/tracks/Donut_Plains/old_donut_sfc.obj" id="1_x3mqp"]
 [ext_resource type="Texture2D" uid="uid://dqu74t1mbf4em" path="res://assets/tracks/Donut_Plains/lambert210.png" id="2_rdd0a"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bisx3ql75fjv7" path="res://assets/tracks/Donut_Plains/ro01.png" id="8_txul1"]
 [ext_resource type="Texture2D" uid="uid://c00jal52qgvnf" path="res://assets/tracks/Donut_Plains/grass_01.png" id="9_xqvec"]
 [ext_resource type="AudioStream" uid="uid://b63k2lljftiax" path="res://assets/sounds/mu_donut_plains.mp3" id="10_1he3j"]
+[ext_resource type="PackedScene" uid="uid://bl7yp56hkp8e6" path="res://scenes/item_box.tscn" id="11_357r4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_th4ti"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -105,6 +106,12 @@ size = Vector3(3.29077, 1.39844, 38.1015)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_327mg"]
 size = Vector3(37.394, 1.32556, 4.32886)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0gocc"]
+size = Vector3(12.4937, 1.30176, 3.27783)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5stv2"]
+size = Vector3(12.5616, 1.36957, 3.1626)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fpnrh"]
 size = Vector3(37.4507, 0.82605, 1.46143)
@@ -291,6 +298,20 @@ shape = SubResource("BoxShape3D_6h2co")
 transform = Transform3D(0.722714, 0, -0.691147, 0, 1, 0, 0.691147, 0, 0.722714, -38.0255, 6.86986, 47.7312)
 shape = SubResource("BoxShape3D_327mg")
 
+[node name="ShortcutWall1" type="StaticBody3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.1324, 9.81154, -10.8935)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collision/ShortcutWall1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.93572, -2.96451, 6.91504)
+shape = SubResource("BoxShape3D_0gocc")
+
+[node name="ShortcutWall2" type="StaticBody3D" parent="Collision"]
+transform = Transform3D(0.999946, 0.0103671, 0, -0.0103671, 0.999946, 0, 0, 0, 1, 91.1553, 6.73147, -2.83302)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collision/ShortcutWall2"]
+transform = Transform3D(1.00005, 2.00234e-07, 0, -2.00234e-07, 1.00005, 0, 0, 0, 1, 5.7808, 0.106111, -1.0813)
+shape = SubResource("BoxShape3D_5stv2")
+
 [node name="BridgeWall1" type="StaticBody3D" parent="Collision"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.51734, -89.8866)
 
@@ -304,3 +325,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.51734, -77.4129)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Collision/BridgeWall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.65578, 1.11964, 0.114899)
 shape = SubResource("BoxShape3D_fpnrh")
+
+[node name="ItemBox" parent="." instance=ExtResource("11_357r4")]
+transform = Transform3D(-0.441133, -3.85651e-08, -0.235375, 4.37114e-08, -0.5, 0, -0.235375, -2.05771e-08, 0.441133, -67.0377, 6.65992, -61.4559)
