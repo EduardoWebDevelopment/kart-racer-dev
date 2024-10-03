@@ -23,6 +23,7 @@ radial_segments = 10
 albedo_texture = ExtResource("3_fugd6")
 
 [node name="Car" type="VehicleBody3D"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
 mass = 50.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, 0, 0.3)

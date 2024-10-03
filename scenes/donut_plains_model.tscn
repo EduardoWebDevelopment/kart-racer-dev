@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bisx3ql75fjv7" path="res://assets/tracks/Donut_Plains/ro01.png" id="8_txul1"]
 [ext_resource type="Texture2D" uid="uid://c00jal52qgvnf" path="res://assets/tracks/Donut_Plains/grass_01.png" id="9_xqvec"]
 [ext_resource type="AudioStream" uid="uid://b63k2lljftiax" path="res://assets/sounds/mu_donut_plains.mp3" id="10_1he3j"]
-[ext_resource type="PackedScene" uid="uid://bl7yp56hkp8e6" path="res://scenes/item_box.tscn" id="11_357r4"]
+[ext_resource type="PackedScene" uid="uid://bl7yp56hkp8e6" path="res://scenes/models/item_box.tscn" id="11_357r4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_th4ti"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -25,28 +25,28 @@ sky = SubResource("Sky_ruv8p")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eynce"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fank2"]
 albedo_texture = ExtResource("2_rdd0a")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b3107"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_idisx"]
 albedo_texture = ExtResource("3_mcm12")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tnj50"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xgx6k"]
 albedo_texture = ExtResource("4_quacu")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cyq12"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mnj8s"]
 albedo_texture = ExtResource("5_3q66j")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h4260"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sh8dd"]
 albedo_texture = ExtResource("6_580ee")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s2g1a"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i7c02"]
 albedo_texture = ExtResource("7_avcta")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wmd5w"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1qs6j"]
 albedo_texture = ExtResource("8_txul1")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uey4n"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f541m"]
 albedo_texture = ExtResource("9_xqvec")
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_kmch2"]
@@ -127,14 +127,14 @@ shadow_enabled = true
 
 [node name="Track" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_x3mqp")
-surface_material_override/0 = SubResource("StandardMaterial3D_eynce")
-surface_material_override/1 = SubResource("StandardMaterial3D_b3107")
-surface_material_override/2 = SubResource("StandardMaterial3D_tnj50")
-surface_material_override/3 = SubResource("StandardMaterial3D_cyq12")
-surface_material_override/4 = SubResource("StandardMaterial3D_h4260")
-surface_material_override/5 = SubResource("StandardMaterial3D_s2g1a")
-surface_material_override/6 = SubResource("StandardMaterial3D_wmd5w")
-surface_material_override/7 = SubResource("StandardMaterial3D_uey4n")
+surface_material_override/0 = SubResource("StandardMaterial3D_fank2")
+surface_material_override/1 = SubResource("StandardMaterial3D_idisx")
+surface_material_override/2 = SubResource("StandardMaterial3D_xgx6k")
+surface_material_override/3 = SubResource("StandardMaterial3D_mnj8s")
+surface_material_override/4 = SubResource("StandardMaterial3D_sh8dd")
+surface_material_override/5 = SubResource("StandardMaterial3D_i7c02")
+surface_material_override/6 = SubResource("StandardMaterial3D_1qs6j")
+surface_material_override/7 = SubResource("StandardMaterial3D_f541m")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_1he3j")
@@ -326,5 +326,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.51734, -77.4129)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.65578, 1.11964, 0.114899)
 shape = SubResource("BoxShape3D_fpnrh")
 
-[node name="ItemBox" parent="." instance=ExtResource("11_357r4")]
+[node name="Item Boxes" type="Node3D" parent="."]
+
+[node name="ItemBox" parent="Item Boxes" instance=ExtResource("11_357r4")]
 transform = Transform3D(-0.441133, -3.85651e-08, -0.235375, 4.37114e-08, -0.5, 0, -0.235375, -2.05771e-08, 0.441133, -67.0377, 6.65992, -61.4559)
