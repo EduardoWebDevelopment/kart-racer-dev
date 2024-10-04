@@ -56,7 +56,7 @@ albedo_texture = ExtResource("9_xqvec")
 albedo_color = Color(0.171514, 0.350179, 0.113658, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_aim7y"]
-size = Vector3(209.26, 1.63037, 1.61536)
+size = Vector3(209.26, 9.67923, 1.61536)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ymf3m"]
 size = Vector3(3.53363, 2.36389, 93.3714)
@@ -158,15 +158,15 @@ surface_material_override/0 = SubResource("StandardMaterial3D_kv1iq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75.5551, 6.91112, -104.6)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Collision/OuterWall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75.4853, 0.315186, 0.684998)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75.4853, -0.109924, 0.684998)
 shape = SubResource("BoxShape3D_aim7y")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Collision/OuterWall"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -28.3292, 0.315186, 104.961)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -28.3292, -1.05539, 104.961)
 shape = SubResource("BoxShape3D_aim7y")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="Collision/OuterWall"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 75.7681, 0.000465393, 208.629)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 75.7681, -2.22828, 208.629)
 shape = SubResource("BoxShape3D_aim7y")
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="Collision/OuterWall"]
