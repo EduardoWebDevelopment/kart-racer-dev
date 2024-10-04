@@ -23,7 +23,7 @@ glow_enabled = true
 environment = SubResource("Environment_vtlft")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.573518, -0.802997, 0.16209, 0.8191, -0.565091, 0.0987202, 0.0123237, 0.189386, 0.981825, 0, 82.2684, 17.8383)
+transform = Transform3D(-0.573518, -0.802997, 0.16209, 0.8191, -0.565092, 0.0987205, 0.0123237, 0.189386, 0.981825, 0, 82.2684, 20.1407)
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]

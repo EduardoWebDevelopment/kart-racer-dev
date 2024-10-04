@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://n57ydi123qm"]
+[gd_scene load_steps=45 format=3 uid="uid://n57ydi123qm"]
 
 [ext_resource type="ArrayMesh" uid="uid://cljdognfel8og" path="res://assets/tracks/Donut_Plains/old_donut_sfc.obj" id="1_x3mqp"]
 [ext_resource type="Texture2D" uid="uid://dqu74t1mbf4em" path="res://assets/tracks/Donut_Plains/lambert210.png" id="2_rdd0a"]
@@ -9,8 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cfe3g0ldn2wug" path="res://assets/tracks/Donut_Plains/sea1.png" id="7_avcta"]
 [ext_resource type="Texture2D" uid="uid://bisx3ql75fjv7" path="res://assets/tracks/Donut_Plains/ro01.png" id="8_txul1"]
 [ext_resource type="Texture2D" uid="uid://c00jal52qgvnf" path="res://assets/tracks/Donut_Plains/grass_01.png" id="9_xqvec"]
-[ext_resource type="AudioStream" uid="uid://b63k2lljftiax" path="res://assets/sounds/mu_donut_plains.mp3" id="10_1he3j"]
-[ext_resource type="PackedScene" uid="uid://bl7yp56hkp8e6" path="res://scenes/models/item_box.tscn" id="11_357r4"]
+[ext_resource type="AudioStream" uid="uid://b63k2lljftiax" path="res://assets/sounds/mu_donut.mp3" id="10_1he3j"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_th4ti"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -325,8 +324,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.51734, -77.4129)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Collision/BridgeWall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.65578, 1.11964, 0.114899)
 shape = SubResource("BoxShape3D_fpnrh")
-
-[node name="Item Boxes" type="Node3D" parent="."]
-
-[node name="ItemBox" parent="Item Boxes" instance=ExtResource("11_357r4")]
-transform = Transform3D(-0.441133, -3.85651e-08, -0.235375, 4.37114e-08, -0.5, 0, -0.235375, -2.05771e-08, 0.441133, -67.0377, 6.65992, -61.4559)
