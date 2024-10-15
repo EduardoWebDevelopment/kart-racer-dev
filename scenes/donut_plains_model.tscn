@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cfe3g0ldn2wug" path="res://assets/tracks/Donut_Plains/sea1.png" id="7_avcta"]
 [ext_resource type="Texture2D" uid="uid://bisx3ql75fjv7" path="res://assets/tracks/Donut_Plains/ro01.png" id="8_txul1"]
 [ext_resource type="Texture2D" uid="uid://c00jal52qgvnf" path="res://assets/tracks/Donut_Plains/grass_01.png" id="9_xqvec"]
-[ext_resource type="AudioStream" uid="uid://b63k2lljftiax" path="res://assets/sounds/mu_donut.mp3" id="10_1he3j"]
+[ext_resource type="AudioStream" uid="uid://b63k2lljftiax" path="res://assets/sounds/music/sng_donut.mp3" id="10_1he3j"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_th4ti"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)

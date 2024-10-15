@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://scripts/title_screen_buttons/controls.gd" id="3_nngt7"]
 [ext_resource type="Texture2D" uid="uid://wf1olbqmhl2a" path="res://assets/images/racing_flags.png" id="3_snkco"]
 [ext_resource type="Script" path="res://scripts/title_screen_buttons/credits.gd" id="4_f8gtn"]
-[ext_resource type="AudioStream" uid="uid://bbk77kxnfq5au" path="res://assets/sounds/mu_title.mp3" id="7_kl6vj"]
+[ext_resource type="AudioStream" uid="uid://bbk77kxnfq5au" path="res://assets/sounds/music/sng_title.mp3" id="7_kl6vj"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3

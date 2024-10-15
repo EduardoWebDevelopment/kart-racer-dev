@@ -1,0 +1,26 @@
+[gd_scene load_steps=7 format=3 uid="uid://7pnfop8ntqwp"]
+
+[ext_resource type="Script" path="res://addons/terrabrush/TerraBrush.cs" id="1_byuo6"]
+[ext_resource type="Texture2D" uid="uid://jey4kx5rrf1k" path="res://assets/tracks/TrkFinance/Heightmap_0_0.res" id="2_c4314"]
+[ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/ZoneResource.cs" id="3_wlyet"]
+[ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/ZonesResource.cs" id="4_h3f0p"]
+
+[sub_resource type="Resource" id="Resource_g6pyn"]
+script = ExtResource("3_wlyet")
+ZonePosition = Vector2i(0, 0)
+HeightMapTexture = ExtResource("2_c4314")
+SplatmapsTexture = []
+FoliagesTexture = null
+ObjectsTexture = null
+
+[sub_resource type="Resource" id="Resource_si01l"]
+script = ExtResource("4_h3f0p")
+Zones = [SubResource("Resource_g6pyn")]
+
+[node name="TrkFinance" type="Node3D"]
+
+[node name="TerraBrush" type="Node3D" parent="."]
+script = ExtResource("1_byuo6")
+DataPath = "res://assets/tracks/TrkFinance"
+TerrainZones = SubResource("Resource_si01l")
+metadata/_edit_lock_ = true

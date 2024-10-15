@@ -28,3 +28,13 @@ text = "Luna Ascension"
 [node name="filibuster_invasion" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 text = "Filibuster Invasion"
+
+[node name="psychomon" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Psychomon
+"
+
+[node name="2player_vs" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "2-Player VS
+"
