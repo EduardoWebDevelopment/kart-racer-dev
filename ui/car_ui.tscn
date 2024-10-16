@@ -44,11 +44,25 @@ anchor_top = 0.918
 anchor_right = 1.004
 anchor_bottom = 1.0
 offset_left = 0.160156
-offset_top = 0.135986
+offset_top = -661.96
 offset_right = -56.6079
-offset_bottom = -30.0
+offset_bottom = -692.096
 scale = Vector2(2.41863, 2.41863)
 text = "Map"
+
+[node name="SpeedLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.92
+anchor_top = 0.918
+anchor_right = 1.004
+anchor_bottom = 1.0
+offset_left = -24.6
+offset_top = -2.95996
+offset_right = -81.368
+offset_bottom = -33.0959
+scale = Vector2(2.41863, 2.41863)
+text = "SPEED"
 
 [node name="Position" type="Label" parent="."]
 layout_mode = 1

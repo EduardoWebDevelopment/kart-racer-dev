@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/sng_finance_alt.mp3-59bb19c6462e9d6a780c9d5ec
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
+loop=true
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

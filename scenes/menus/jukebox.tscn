@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ck1om1dv1vcl7"]
 
-[ext_resource type="Script" path="res://scripts/jukebox_buttons/sky_garden.gd" id="1_nqt33"]
+[ext_resource type="Script" path="res://scripts/jukebox_buttons/music_player.gd" id="1_nqt33"]
 [ext_resource type="AudioStream" uid="uid://1nwdmko044nj" path="res://assets/sounds/music/sng_garden.mp3" id="2_ylnu8"]
 
 [node name="Jukebox" type="Control"]
