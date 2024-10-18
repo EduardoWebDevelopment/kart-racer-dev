@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://4d7kqu78guqg"]
+
+[ext_resource type="PackedScene" uid="uid://bxnlxf7gvois3" path="res://scenes/models/block.tscn" id="3_42nl1"]
+[ext_resource type="PackedScene" uid="uid://n57ydi123qm" path="res://scenes/donut_plains_model.tscn" id="3_pmj4p"]
+[ext_resource type="PackedScene" uid="uid://dkuwcntbn4jl2" path="res://scenes/models/car.tscn" id="12_nm0t3"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u3wcw"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_f5lsl"]
+sky_material = SubResource("ProceduralSkyMaterial_u3wcw")
+
+[sub_resource type="Environment" id="Environment_vtlft"]
+background_mode = 2
+sky = SubResource("Sky_f5lsl")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Game" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_vtlft")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.573518, -0.802997, 0.16209, 0.8191, -0.565092, 0.0987205, 0.0123237, 0.189386, 0.981825, 0, 82.2684, 20.1407)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 56, 237.218, 58.8122)
+
+[node name="Car" parent="." instance=ExtResource("12_nm0t3")]
+transform = Transform3D(-0.999599, 0, -0.0283229, 0, 1, 0, 0.0283229, 0, -0.999599, -75.91, 7.5572, 15.3733)
+
+[node name="DonutPlainsModel" parent="." instance=ExtResource("3_pmj4p")]
+
+[node name="Node3D" parent="." instance=ExtResource("3_42nl1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76, 9, -16)
