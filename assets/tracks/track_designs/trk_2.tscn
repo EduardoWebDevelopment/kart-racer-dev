@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://bipq4y1kincch"]
 
 [ext_resource type="PackedScene" uid="uid://dkuwcntbn4jl2" path="res://scenes/models/car.tscn" id="1_hbn7v"]
-[ext_resource type="Texture2D" uid="uid://b3jjiel6oe0xy" path="res://assets/skyboxes/skybox_finance.jpg" id="1_x1y6x"]
+[ext_resource type="Texture2D" uid="uid://b3jjiel6oe0xy" path="res://assets/images/skyboxes/skybox_finance.jpg" id="1_x1y6x"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_w8v81"]
 panorama = ExtResource("1_x1y6x")

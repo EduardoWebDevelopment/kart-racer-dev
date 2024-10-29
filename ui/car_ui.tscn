@@ -1,6 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://bmwh6n8gr4wvd"]
-
-[ext_resource type="Texture2D" uid="uid://d0wpkdrbflgx1" path="res://assets/images/BananaMK8.webp" id="1_rydo4"]
+[gd_scene format=3 uid="uid://bmwh6n8gr4wvd"]
 
 [node name="Ui" type="Control"]
 layout_mode = 3
@@ -11,81 +9,56 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Item" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.085
-anchor_bottom = 0.087
-offset_top = -9.0
-offset_right = -57.92
-offset_bottom = -42.376
-scale = Vector2(2.43711, 2.43711)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 32
 text = "Item"
-
-[node name="BoxContainer" type="BoxContainer" parent="Item"]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.892
-anchor_right = 1.6
-anchor_bottom = 3.675
-offset_top = 0.000101089
-offset_bottom = -0.0089035
-
-[node name="TextureRect" type="TextureRect" parent="Item/BoxContainer"]
-visible = false
-layout_mode = 2
-texture = ExtResource("1_rydo4")
-expand_mode = 2
-
-[node name="Mini-Map" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.92
-anchor_top = -0.001
-anchor_right = 1.016
-anchor_bottom = 0.096
-offset_left = 0.160156
-offset_top = -0.280061
-offset_right = -71.968
-offset_bottom = -41.216
-scale = Vector2(2.41863, 2.41863)
-text = "Map"
-metadata/_edit_use_anchors_ = true
-
-[node name="SpeedLabel" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.901
-anchor_top = 0.914
-anchor_right = 0.997
-anchor_bottom = 1.011
-offset_left = -0.280029
-offset_top = -0.0800171
-offset_right = -72.4082
-offset_bottom = -41.0159
-scale = Vector2(2.41863, 2.41863)
-
-[node name="Position" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.819
-anchor_right = 0.087
-anchor_bottom = 0.908
-offset_top = 0.288025
-offset_right = -60.224
-offset_bottom = -34.384
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(2.49652, 2.49652)
-text = "1st"
 
 [node name="Lap" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.918
-anchor_right = 0.133
-anchor_bottom = 1.0
-offset_top = 0.135986
-offset_right = -90.216
-offset_bottom = -30.0
-scale = Vector2(2.43771, 2.43771)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -109.0
+offset_top = 51.0
+offset_bottom = 96.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 32
 text = "Lap ?/3"
+
+[node name="Placement" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -45.0
+offset_right = 109.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "1st"
+
+[node name="Time" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -109.0
+offset_bottom = 45.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 32
+text = "00:00.000"
+
+[node name="Map" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -109.0
+offset_top = -45.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "Map"

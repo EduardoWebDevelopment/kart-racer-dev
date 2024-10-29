@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cbq6dgmwt0u82"]
+[gd_scene load_steps=9 format=3 uid="uid://cbq6dgmwt0u82"]
 
 [ext_resource type="PackedScene" uid="uid://dkuwcntbn4jl2" path="res://scenes/models/car.tscn" id="1_rflty"]
-[ext_resource type="Texture2D" uid="uid://b3jjiel6oe0xy" path="res://assets/skyboxes/skybox_finance.jpg" id="1_tl23f"]
+[ext_resource type="Texture2D" uid="uid://b3jjiel6oe0xy" path="res://assets/images/skyboxes/skybox_finance.jpg" id="1_tl23f"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tl4ks"]
 panorama = ExtResource("1_tl23f")
@@ -24,6 +24,8 @@ point_count = 16
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d8482"]
 albedo_color = Color(0.325441, 0.325441, 0.325441, 1)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_lac0i"]
 
 [node name="CurveTest" type="Node3D"]
 
@@ -92,6 +94,12 @@ mix_target = 1
 bus = &"Music"
 
 [node name="Car" parent="." instance=ExtResource("1_rflty")]
-transform = Transform3D(0.232017, 0, -0.60718, 0, 0.65, 0, 0.60718, 0, 0.232017, -176.257, 19.7382, 93.0638)
+transform = Transform3D(-0.634545, 0, -0.140896, 0, 0.65, 0, 0.140896, 0, -0.634545, 339.332, 17.5758, 223.892)
 mass = 100.0
-gravity_scale = 2.5
+gravity_scale = 1.5
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.2032, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("WorldBoundaryShape3D_lac0i")

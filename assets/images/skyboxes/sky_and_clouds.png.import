@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3jjiel6oe0xy"
-path.s3tc="res://.godot/imported/skybox_finance.jpg-d3c69ea5da743d8d53a0a59713b2c4aa.s3tc.ctex"
+uid="uid://c7c5fn2n1ph36"
+path.s3tc="res://.godot/imported/sky_and_clouds.png-4f225982d0c84bd998db173c500881bf.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/skyboxes/skybox_finance.jpg"
-dest_files=["res://.godot/imported/skybox_finance.jpg-d3c69ea5da743d8d53a0a59713b2c4aa.s3tc.ctex"]
+source_file="res://assets/images/skyboxes/sky_and_clouds.png"
+dest_files=["res://.godot/imported/sky_and_clouds.png-4f225982d0c84bd998db173c500881bf.s3tc.ctex"]
 
 [params]
 

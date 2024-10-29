@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dkuwcntbn4jl2"]
+[gd_scene load_steps=11 format=3 uid="uid://dkuwcntbn4jl2"]
 
 [ext_resource type="Script" path="res://scripts/car2.gd" id="1_318nw"]
 [ext_resource type="Texture2D" uid="uid://dxsdvosl0qecw" path="res://assets/images/webdev_logo.png" id="3_fugd6"]
 [ext_resource type="PackedScene" uid="uid://bmwh6n8gr4wvd" path="res://ui/car_ui.tscn" id="3_pow51"]
+[ext_resource type="PackedScene" uid="uid://cu6oq4whbnukt" path="res://scenes/game_listener.tscn" id="4_wo7wx"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ibdse"]
 
@@ -112,3 +113,6 @@ mesh = SubResource("PlaneMesh_p47ak")
 surface_material_override/0 = SubResource("StandardMaterial3D_30a7e")
 
 [node name="Ui" parent="." instance=ExtResource("3_pow51")]
+
+[node name="GameListener" parent="." instance=ExtResource("4_wo7wx")]
+visible = false
